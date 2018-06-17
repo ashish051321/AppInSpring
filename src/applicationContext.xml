@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<!-- add entry to enable component scanning.. we are using spring annotations -->
+
+	<context:component-scan
+		base-package="com.learnspring.coaches, com.learnspring.services"></context:component-scan>
+
+	<bean id="project" class="com.learnspring.data.Project">
+		<property name="projectNames">
+			<list>
+				<value>Build an ionic app</value>
+				<value>Create a painting of city landscape</value>
+				<value>Compose a song.</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>
