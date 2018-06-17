@@ -14,7 +14,7 @@ public class App {
 	      ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 	      
 	      
-	      
+	      System.out.println("===========================");
 	      //The actions
 	      Coach c1 = context.getBean("tennisCoach",Coach.class);
 	      System.out.println("This is the " + c1.getClass().getSimpleName() +".....");

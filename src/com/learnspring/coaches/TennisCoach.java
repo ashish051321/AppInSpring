@@ -1,14 +1,19 @@
 package com.learnspring.coaches;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import com.learnspring.data.Project;
 import com.learnspring.services.FortuneService;
 
 @Component
+@Scope("prototype")
 public class TennisCoach implements Coach {
 
 	private FortuneService fortuneService;
@@ -49,6 +54,20 @@ public class TennisCoach implements Coach {
 	public void printDetails(){
 		System.out.println("Developer Name: "+this.developer_name);
 		System.out.println("Developer Email: "+this.developer_email);
+	}
+	
+	@PostConstruct
+	private void anyMethod(){
+		System.out.println("I was called as a part of PostConstruct in TennisCoach");
+	}
+	
+	@PreDestroy
+	private void wrappingThingsUp(){
+		System.out.println("The PreDestroy methd being called on TennisCoach");
+//		To get the Spring container to release resources held by prototype-scoped beans, 
+//		try using a custom bean post-processor, which holds a reference 
+//		to beans that need to be cleaned up.
+		
 	}
 	
 	
