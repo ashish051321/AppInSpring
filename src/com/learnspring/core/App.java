@@ -21,7 +21,7 @@ public class App {
 	      System.out.println("Instructions:- " + c1.getInstructions());
 	      System.out.println("Fortune:- " + c1.getFortune());
 	      System.out.println("My Project:- "+c1.getMyProject());
-	      
+	      c1.printDetails();
 	      
 	      
 	      context.close();

@@ -7,4 +7,8 @@ public interface Coach {
 	public String getFortune();
 	
 	public String getMyProject();
+	
+	public void printDetails();
+
+	
 }

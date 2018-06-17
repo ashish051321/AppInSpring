@@ -31,6 +31,12 @@ public class BasketballCoach implements Coach {
 	public String getMyProject() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void printDetails() {
+		// TODO Auto-generated method stub
+		
 	}	
 
 
