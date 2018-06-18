@@ -1,17 +1,19 @@
 package com.learnspring.core;
 
 import org.springframework.context.ApplicationContext;
-
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.learnspring.coaches.BasketballCoach;
 import com.learnspring.coaches.Coach;
+import com.learnspring.config.SportConfig;
 
-public class App {
+public class AppUsingJavaConfig {
 
 	public static void main(String[] args) {
 		
 	      ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+	     
 	      
 	      
 	      System.out.println("===========================");
